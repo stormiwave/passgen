@@ -1,0 +1,105 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lavender;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    padding-bottom: 5px;
+    display: flexbox;
+    flex: row nowrap;
+}
+
+header{
+    height: 86px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: #09f;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    width:40%;
+    float: left;
+}
+
+#buttons{
+    align-items:flex-end;
+}
+
+button {
+    background-color: #e5e1f4;
+    border-radius: 3px;
+    border: 1px solid #9a7ac7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #6d399d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 5px;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    width: 150px;
+}
+
+button:hover,
+button:focus {
+    background-color: #d0b3ea;
+    color: #622c77;
+}
+
+button:focus {
+    box-shadow: 0 0 0 4px rgba(136, 0, 255, 0.15);
+}
+
+button:active {
+    background-color: #afa0e4;
+    box-shadow: none;
+    color: #532c77;
+}
+
+#passwords {
+    border-color: #cda4ff;
+    border-style: dashed;
+    height: 220px;
+    width: 30%;
+    border-radius: 5px;
+  }
+
+footer{
+    position:absolute;
+    bottom:0;
+    text-align: center;
+    width: 100%;
+    float:left;
+    padding: 20px;
+    height: 5px;
+}
