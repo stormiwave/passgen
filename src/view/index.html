@@ -12,9 +12,9 @@
         <meta name="theme-color" content="#09f">
 
         <link href="./resources/index.css" type="text/css" rel="stylesheet">
-        <link rel="icon" type="image/jpg" href="./resources/favicon.png">
+        <link rel="icon" type="image/png" href="./resources/favicon.png">
 
-        <script type="text/javascript" src="./JS/index.js"></script>
+        <script type="module" src="./js/index.js"></script>
     </head>
 
     <body>
@@ -23,14 +23,13 @@
         </header>
         <main>
             <section id="buttons">
-                <button id="generate" onclick="generatePassword();">Generate</button>
+                <button id="generate">Generate</button>
                 <button id="copy">Copy</button>
                 <button id="download">Download in TXT</button>
             </section>
             <section id="passwords-section">
                 <textarea id="allpass" autofocus value="Your new password will appear here."></textarea>
             </section>
-            <button id="test" onclick="displayMessage();">Display message box</button>
         </main>
         <footer>
             <small>© 2024 Password generator. All rights reserved.</small>
