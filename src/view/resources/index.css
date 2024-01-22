@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
     margin: 0;
     padding: 0;
     background-color: lavender;
@@ -13,12 +13,6 @@ body {
     position: relative;
 }
 
-main {
-    padding-bottom: 5px;
-    display: flexbox;
-    flex: row nowrap;
-}
-
 header{
     height: 86px;
     padding: 20px;
@@ -27,12 +21,16 @@ header{
     text-align: center;
 }
 
+main {
+    padding-bottom: 30px;
+}
+
 h1 {
     font-family: #09f;
     text-wrap: balance;
 }
 
-section {
+div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -107,12 +105,42 @@ textarea:focus-visible{
     outline: none;
 }
 
+form{
+    display: block;
+    margin: 15px;
+    text-align: left;
+    padding-left: 30vw;
+    color: #6d399d;
+}
+
+label{
+    display: block;
+    width: fit-content;
+}
+
+fieldset{
+    border: 0;
+}
+
+fieldset label{
+    margin-left: 15px;
+}
+
+input {
+    border-color: #cda4ff;
+    border-style: dashed;
+    border-radius: 5px;
+}
+
+.checkbox{
+    background-color: #6d399d;
+}
+
 footer{
     position:absolute;
     bottom:0;
     text-align: center;
     width: 100%;
     float:left;
-    padding: 20px;
-    height: 5px;
+    height: 30px;
 }
