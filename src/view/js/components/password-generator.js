@@ -1,24 +1,49 @@
-function makeid (length) {
+function makeRandomPass (form) {
   let result = ''
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!";#$%&\'()*+,-./:;<=>?@[]^_`{|}~'
+  const characters = charSelector(form.passCharacters)
   const charactersLength = characters.length
   let counter = 0
-  while (counter < length) {
+  while (counter < form.passLength) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength))
     counter += 1
   }
   return result
 }
 
+function charSelector (charSelection) {
+  let characters = ''
+
+  if (charSelection.upperCase) {
+    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  }
+  if (charSelection.lowerCase) {
+    characters = characters + 'abcdefghijklmnopqrstuvwxyz'
+  }
+  if (charSelection.numbers) {
+    characters = characters + '0123456789'
+  }
+  if (charSelection.symbols) {
+    characters = characters + '!";#$%&\'()*+,-./:;<=>?@[]^_`{|}~'
+  }
+  return characters
+}
+
 function insertText (textarea, text) {
-  const position = textarea.selectionStart
-  const end = position + text.length
-  textarea.setRangeText(text, 0, end, 'select')
+  textarea.value = text.join('\n')
 };
 
-export function generatePassword () {
-  const password = (makeid(40))
+function cleanText (textarea) {
+  textarea.value = ''
+};
 
+export function generatePassword (form) {
   const textarea = document.getElementById('allpass')
-  insertText(textarea, password)
+  cleanText(textarea)
+
+  const passwords = []
+  for (let i = 0; i < form.passQty; i++) {
+    passwords.push(makeRandomPass(form))
+  }
+
+  insertText(textarea, passwords)
 }
