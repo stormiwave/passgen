@@ -17,7 +17,7 @@ function insertText (textarea, text) {
 };
 
 export function generatePassword () {
-  const password = (makeid(20))
+  const password = (makeid(40))
 
   const textarea = document.getElementById('allpass')
   insertText(textarea, password)
