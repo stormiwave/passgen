@@ -24,17 +24,18 @@
         <main>
             <section>
             <div id="buttons">
-                <button id="generate">Generate</button>
+                <button id="generate" type="submit" form="passwordForm">Generate</button>
                 <button id="copy">Copy</button>
                 <button id="download">Download in TXT</button>
             </div>
             <div id="passwords-section">
+                <pre></pre>
                 <textarea id="allpass" autofocus value="Your new password will appear here."></textarea>
             </div>
             </section>
-            <form>
+            <form id="passwordForm">
                 <label>Number of passwords: 
-                    <input id="pass-qty" type="number" value="1">
+                    <input id="pass-qty" type="number" value="5">
                 </label>
                 <label>Password length: 
                     <input id="pass-length" type="number" value="20">
@@ -54,7 +55,7 @@
                     </label>
                     <label> 
                         <input id="char-symbols" type="checkbox" class="checkbox" checked>
-                        Symbols
+                        Symbols <input id="spec-chars" type="text" value="!&quot;;#$%&\'()*+,-./:;&lt;=&gt;?@[]^_`{|}~">
                     </label>
                 </fieldset>
             </form>

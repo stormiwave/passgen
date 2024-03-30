@@ -7,4 +7,6 @@ export class Form {
     upperCase: true,
     symbols: true
   }
+
+  symbolCharacters
 }

@@ -14,7 +14,6 @@ body {
 }
 
 header{
-    height: 86px;
     padding: 20px;
     position: relative;
     width: 100%;
@@ -23,24 +22,29 @@ header{
 
 main {
     padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
 }
 
 h1 {
     font-family: #09f;
     text-wrap: balance;
 }
+section {
+    width: 600px;
+    align-items: center;
+}
 
 div {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     padding: 10px;
-    width:40%;
-    float: left;
+    float:inline-start;
 }
 
 #buttons{
     align-items:flex-end;
+    flex-direction: column;
 }
 
 button {
@@ -90,15 +94,29 @@ button:active {
     border-color: #cda4ff;
     border-style: dashed;
     height: 220px;
-    width: 30%;
     border-radius: 5px;
-  }
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+pre{
+    width: 2em;
+    text-align: right;
+    overflow: hidden;
+    background-color: #c8c3d4;
+    padding-right: 5px;
+}
 
 textarea{
     border: none;
-    height: 100%;
-    width: 100%;
+    min-height: 10em;
+    width: 250px;
     cursor: text;
+    resize:none;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: auto;
 }
 
 textarea:focus-visible{
@@ -109,7 +127,6 @@ form{
     display: block;
     margin: 15px;
     text-align: left;
-    padding-left: 30vw;
     color: #6d399d;
 }
 
@@ -132,6 +149,11 @@ input {
     border-color: #cda4ff;
     border-style: dashed;
     border-radius: 5px;
+    padding-left: 5px;
+}
+
+#spec-chars {
+    width: 220px;
 }
 
 .checkbox{

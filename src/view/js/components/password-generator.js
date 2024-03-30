@@ -1,6 +1,6 @@
 function makeRandomPass (form) {
   let result = ''
-  const characters = charSelector(form.passCharacters)
+  const characters = charSelector(form.passCharacters, form.symbolCharacters)
   const charactersLength = characters.length
   let counter = 0
   while (counter < form.passLength) {
@@ -10,7 +10,7 @@ function makeRandomPass (form) {
   return result
 }
 
-function charSelector (charSelection) {
+function charSelector (charSelection, symbolCharacters) {
   let characters = ''
 
   if (charSelection.upperCase) {
@@ -23,13 +23,15 @@ function charSelector (charSelection) {
     characters = characters + '0123456789'
   }
   if (charSelection.symbols) {
-    characters = characters + '!";#$%&\'()*+,-./:;<=>?@[]^_`{|}~'
+    characters = characters + symbolCharacters
   }
   return characters
 }
 
 function insertText (textarea, text) {
   textarea.value = text.join('\n')
+  const cont = textarea.value.split('\n')
+  document.querySelector('pre').innerText = new Array(cont.length).fill(0).map((_, i) => i + 1).join('\n')
 };
 
 function cleanText (textarea) {
