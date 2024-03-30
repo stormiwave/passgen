@@ -1,8 +1,7 @@
 * {
-    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: lavender;
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
@@ -11,7 +10,20 @@
 body {
     min-height: 100vh;
     position: relative;
+    font-size: 15px;
+    font-weight: 400;
 }
+
+.background__image {
+    background: url('../assets/paper_bg.jpg') center no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
 header{
     padding: 20px;
@@ -24,13 +36,15 @@ main {
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 870px;
 }
 
 h1 {
-    font-family: #09f;
+    font-weight:700;
     text-wrap: balance;
+    color: #8b7373;
 }
+
 section {
     width: 100%;
     align-items: center;
@@ -48,17 +62,16 @@ div {
 }
 
 button {
-    background-color: #e5e1f4;
+    background-color: #f9f8f5;
     border-radius: 3px;
-    border: 1px solid #9a7ac7;
+    border: 1px solid #ccc4c4;
     box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
     box-sizing: border-box;
-    color: #6d399d;
+    color: #8b7373;
+    font-size: 15px;
+    font-weight: 400;
     cursor: pointer;
     display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
     line-height: 1.15385;
     margin: 5px;
     outline: none;
@@ -76,8 +89,8 @@ button {
 
 button:hover,
 button:focus {
-    background-color: #d0b3ea;
-    color: #622c77;
+    background-color: #dcd4d4;
+    color: #8b7373;
 }
 
 button:focus {
@@ -91,8 +104,6 @@ button:active {
 }
 
 #passwords-section {
-    border-color: #cda4ff;
-    border-style: dashed;
     height: 220px;
     border-radius: 5px;
     display: flex;
@@ -104,18 +115,22 @@ pre{
     width: 2em;
     text-align: right;
     overflow: hidden;
-    background-color: #c8c3d4;
+    background-color: #b4adad;
     padding-right: 5px;
 }
 
 textarea{
     border: none;
     min-height: 10em;
-    width: 450px;
+    width: 570px;
     cursor: text;
     resize:none;
     white-space: pre;
     overflow-wrap: normal;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 5px;
 }
 
 textarea:focus-visible{
@@ -126,7 +141,12 @@ form{
     display: block;
     margin: 15px;
     text-align: left;
-    color: #6d399d;
+    color: #8b7373;
+}
+
+input {
+    font-weight: 400;
+    font-size: 15px;
 }
 
 label{
@@ -145,8 +165,7 @@ fieldset label{
 }
 
 input {
-    border-color: #cda4ff;
-    border-style: dashed;
+    border-style: none;
     border-radius: 5px;
     padding-left: 5px;
 }
@@ -155,8 +174,11 @@ input {
     width: 220px;
 }
 
-.checkbox{
-    background-color: #6d399d;
+label[type="checkbox"]{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 footer{
@@ -166,4 +188,5 @@ footer{
     width: 100%;
     float:left;
     height: 30px;
+    color: #8f7a7a;
 }
