@@ -44,8 +44,6 @@ function init () {
   console.log('Initialization tasks finished')
 }
 
-init()
-
 function runGeneratePassword () {
   form.passQty = document.getElementById('pass-qty').value
   form.passLength = document.getElementById('pass-length').value
@@ -54,5 +52,8 @@ function runGeneratePassword () {
   form.passCharacters.upperCase = document.getElementById('char-upper').checked
   form.passCharacters.symbols = document.getElementById('char-symbols').checked
   form.symbolCharacters = document.getElementById('spec-chars').value
+  form.validatePassQtyAndLenght()
   generatePassword(form)
 }
+
+init()

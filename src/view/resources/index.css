@@ -24,7 +24,7 @@ main {
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 800px;
 }
 
 h1 {
@@ -32,7 +32,7 @@ h1 {
     text-wrap: balance;
 }
 section {
-    width: 600px;
+    width: 100%;
     align-items: center;
 }
 
@@ -111,12 +111,11 @@ pre{
 textarea{
     border: none;
     min-height: 10em;
-    width: 250px;
+    width: 450px;
     cursor: text;
     resize:none;
     white-space: pre;
     overflow-wrap: normal;
-    overflow-x: auto;
 }
 
 textarea:focus-visible{
